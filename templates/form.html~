@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<head>
+  <title>GIFS</title>
+</head>
+
+<body>
+  <h1>HAPPY GIF EMPORIUM</h1>
+  Choose the gif you want to view from the dropdown menu <br>
+  <form action="">
+    <select name="gif_name">
+      {% for gif in list_of_gifs %}
+      <option value={{gif}}> {{gif}} </option>
+      {% endfor %}
+    </select> <br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
