@@ -30,11 +30,6 @@ def root():
 @app.route('/display')
 def display():
     url_to_display = request.args['gif_name']
-    return redirect('/gif')
-
-@app.route('/gif', methods=['POST', 'GET'])
-def gif():
-    print url_to_display
     return render_template('gif.html', url = url_to_display)
 
 
