@@ -9,8 +9,8 @@
   Choose the gif you want to view from the dropdown menu <br>
   <form action="/display">
     <select name="gif_name">
-      {% for gif in list_of_gifs %}
-      <option value={{gif}}> {{gif}} </option>
+      {% for k, v in list_of_gifs.items() %}
+      <option value={{v}}> {{k}} </option>
       {% endfor %}
     </select> <br>
     <input type="submit" value="Submit">
